@@ -1,0 +1,83 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.custom-form {
+  /* background-color: #FAF9F6; */
+  border: 3px solid #0d0d0d;
+  padding: 4rem;
+  border-radius: 8px;
+  box-shadow: 40px 50px 40px rgba(25, 25, 25, 25);
+}
+
+.form-background{
+  background-color: #282c34;
+}
+
+.custom-input {
+  background-color: white;
+  border: 1px solid #0d0d0d;
+  padding: 0.5rem;
+  border-radius: 4px;
+  box-shadow: 10px 10px 10px rgba(25, 25, 25, 25);
+}
+
+.custom-button {
+  background-color: #32577e;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 10px 10px 10px rgba(25, 25, 25, 25);
+}
+
+.custom-button:hover {
+  background-color: white;
+  color: black;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+label {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.custom-button {
+  font-family: 'Libre Baskerville', serif;
+}
