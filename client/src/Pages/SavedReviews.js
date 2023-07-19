@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import {Link} from "react-router-dom";
 import axios from "axios";
 import { useGetUserID } from "../Hooks/useGetUserID";
 
@@ -23,34 +24,25 @@ export default function Home() {
   console.log(savedReviews); // Check the value of savedReviews
 
   return (
-    <div>
-      <h1>Saved Reviews</h1>
-      <ul style={{ display: "flex" }}>
-        {savedReviews && savedReviews.map((review) => (
-          <li
-            key={review._id}
-            style={{
-              background: "red",
-              maxWidth: "13rem",
-              margin: "1rem",
-              border: "2px solid black",
-            }}
-          >
-            <div>
-              <h2>{review.ShowName}</h2>
+    <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", margin: "2rem" }}>
+      {savedReviews.map((review) => (
+        <div key={review._id} style={{ width: "20rem", margin: "1rem", padding: "1rem" }}>
+            <div className="text-center card-box rounded-2 p-5 text-center shadow" style={{width:"20rem",height:"35rem"}}>
+              <img
+                src={review.imageURL}
+                alt={review.ShowName}
+                width="150"
+                height="auto"
+                className="solution mb-4"
+              />
+              <div>
+              </div>
+              <h3 className="my-3 fw-normal">{review.ShowName}</h3>
+              <p>Rating : {review.rating} </p>
+              <Link to={`/reviews/${review._id}`} className="btn btn-dark">Read More</Link>
             </div>
-            <div className="Review">
-              <p>{review.Review}</p>
-            </div>
-            <img
-              src={review.imageURL}
-              alt={review.ShowName}
-              style={{ maxHeight: "5rem" }}
-            />
-            <p>Rating: {review.rating}</p>
-          </li>
-        ))}
-      </ul>
-    </div>
+          </div>
+          ))}
+        </div>
   );
 }

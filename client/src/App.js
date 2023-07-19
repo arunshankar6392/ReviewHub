@@ -6,6 +6,7 @@ import ReviewHub from "./Pages/ReviewHub";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SavedReviews from "./Pages/SavedReviews";
 import Navbar from "./Components/Navbar";
+import ReviewPage from "./Pages/ReviewPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/auth" element={<Auth />} />
           <Route path="/create-review" element={<CreateReview />} />
           <Route path="/saved-reviews" element={<SavedReviews />} />
+          <Route path="/reviews/:reviewID" element={<ReviewPage />} />
         </Routes>
       </Router>
     </div>

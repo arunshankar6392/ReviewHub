@@ -81,3 +81,11 @@ label {
 .custom-button {
   font-family: 'Libre Baskerville', serif;
 }
+
+.font-lb {
+  font-family: 'Libre Baskerville', serif;
+}
+
+.cardExpand{
+  box-shadow: 140px 100px 140px black;
+}
