@@ -4,7 +4,7 @@ export default function ReviewHub() {
   return (
     <div className="reviewhub-page">
       <h1 style={{marginTop:"4rem"}}>Welcome to ReviewHub</h1>
-      <hr class="w-50 mx-auto my-3"></hr>
+      <hr className="w-50 mx-auto my-3"></hr>
       <section>
         <div className="container">
           <div className="row">
@@ -42,40 +42,40 @@ export default function ReviewHub() {
           </h5><br></br>
         </section>
         <section style={{marginTop:"5rem"}}>
-    <div class="container text-center common-title fw-bold">
-        <h2 class="common-heading">
+    <div className="container text-center common-title fw-bold">
+        <h2 className="common-heading">
             Now Playing
         </h2>
-        <hr class="w-25 mx-auto"></hr>
+        <hr className="w-25 mx-auto"></hr>
     </div>
-            <div class="container mt-5">
-                <div class="row">
-                    <div class="col-12 col-lg-3 col-md-12">
-                        <div class="text-center card-box rounded-2 p-5 text-center shadow">
+            <div className="container mt-5">
+                <div className="row">
+                    <div className="col-12 col-lg-3 col-md-12">
+                        <div className="text-center card-box rounded-2 p-5 text-center shadow">
                         <img src="https://dx35vtwkllhj9.cloudfront.net/paramountpictures/mission-impossible-7/images/regions/us/share.png" width="250" height="150"className="solution"/>
-                            <h3 class="my-3 fw-normal">Mission Impossible</h3>
-                            <p class="mb-5">The action set pieces in Mission: Impossible - Dead Reckoning Part One are nothing short of spectacular. The film delivers a jaw-dropping train-bound finale that pushes the boundaries of what is physically possible. It is an audacious display of extended action that will leave viewers on the edge of their seats</p>
+                            <h3 className="my-3 fw-normal">Mission Impossible</h3>
+                            <p className="mb-5">The action set pieces in Mission: Impossible - Dead Reckoning Part One are nothing short of spectacular. The film delivers a jaw-dropping train-bound finale that pushes the boundaries of what is physically possible. It is an audacious display of extended action that will leave viewers on the edge of their seats</p>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3 col-md-12">
-                        <div class="text-center card-box rounded-2 p-5 text-center shadow">
+                    <div className="col-12 col-lg-3 col-md-12">
+                        <div className="text-center card-box rounded-2 p-5 text-center shadow">
                         <img src="https://www.flickonclick.com/wp-content/uploads/2023/02/The-Boys-Season-4-Release-Date-on-Amazon-Prime-Video-Cast-Story-Trailer-and-More.webp" width="250" height="150"className="solution"/>
-                            <h3 class="my-3 fw-normal">The Boys</h3>
-                            <p class="mb-5">Adapted from the dark, funny, and at times repulsive graphic novels by Garth Ennis and Darick Robertson, The Boys S1 manages to provide a fresh take in what is probably the most popular (and successful) genre of this generation.</p>
+                            <h3 className="my-3 fw-normal">The Boys</h3>
+                            <p className="mb-5">Adapted from the dark, funny, and at times repulsive graphic novels by Garth Ennis and Darick Robertson, The Boys S1 manages to provide a fresh take in what is probably the most popular (and successful) genre of this generation.</p>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3 col-md-12">
-                        <div class="text-center card-box rounded-2 p-5 text-center shadow">
+                    <div className="col-12 col-lg-3 col-md-12">
+                        <div className="text-center card-box rounded-2 p-5 text-center shadow">
                         <img src="https://www.koimoi.com/wp-content/new-galleries/2023/05/asur-2-review.jpg" width="250" height="150"className="solution"/>
-                            <h3 class="my-3 fw-normal">Asur 2</h3>
-                            <p class="mb-5">Asur Season 2, featuring an intensified pursuit of a cunning mastermind manipulating myths and technology to manipulate and harm individuals, delves deeper into the emotional and physical struggles faced by its characters.</p>
+                            <h3 className="my-3 fw-normal">Asur 2</h3>
+                            <p className="mb-5">Asur Season 2, featuring an intensified pursuit of a cunning mastermind manipulating myths and technology to manipulate and harm individuals, delves deeper into the emotional and physical struggles faced by its characters.</p>
                         </div>
                     </div>
-                    <div class="col-12 col-lg-3 col-md-12">
-                        <div class="text-center card-box rounded-2 p-5 text-center shadow">
+                    <div className="col-12 col-lg-3 col-md-12">
+                        <div className="text-center card-box rounded-2 p-5 text-center shadow">
                         <img src="https://www.crunchyroll.com/imgsrv/display/thumbnail/1200x675/catalog/crunchyroll/1ecde018e863e2aaee31f00a23378c35.jpe" width="250" height="150"className="solution"/>
-                            <h3 class="my-3 fw-normal">One Piece</h3>
-                            <p class="mb-5">There are two responses I get, without fail, every time I try to get someone new to watch this show. "I don't like the art style" or "I've seen the dub - NO THANKS." I'm guilty of both of these myself. But if there's one thing I need to stress before even getting started on this review, it's that the 4Kids dub is NOT One Piece.</p>
+                            <h3 className="my-3 fw-normal">One Piece</h3>
+                            <p className="mb-5">There are two responses I get, without fail, every time I try to get someone new to watch this show. "I don't like the art style" or "I've seen the dub - NO THANKS." I'm guilty of both of these myself. But if there's one thing I need to stress before even getting started on this review, it's that the 4Kids dub is NOT One Piece.</p>
                         </div>
                     </div>
         </div>

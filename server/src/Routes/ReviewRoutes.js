@@ -71,5 +71,20 @@ ReviewRouter.get("/savedReviews/:userID", async (req, res) => {
   }
 });
 
+ReviewRouter.get("/:reviewID", async (req, res) => {
+  try {
+    const reviewID = req.params.reviewID;
+    const review = await ReviewSchema.findById(reviewID);
+    
+    if (!review) {
+      return res.status(404).json({ message: "Review not found" });
+    }
+
+    res.json(review);
+  } catch (err) {
+    res.status(500).json({ message: "Server error" });
+  }
+});
+
 
 module.exports = ReviewRouter;

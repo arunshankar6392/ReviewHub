@@ -1,0 +1,31 @@
+
+
+@import url(https://fonts.googleapis.com/css?family=Megrim);
+
+
+
+hr {
+  height: 1px;
+  background: black;
+  border: none;
+  outline: none;
+  margin: 3em 3em 5em;
+  position: relative;
+
+  &:before {
+    content: attr(data-symbol);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: black;
+    color: black;
+    padding: 0.5em 3em;
+    @include transform(translate(-50%, -50%));
+  }
+}
+
+hr#four {
+  &:before {
+    border: 1px solid black;
+  }
+}
