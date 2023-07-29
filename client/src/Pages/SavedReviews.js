@@ -6,12 +6,12 @@ import { useGetUserID } from "../Hooks/useGetUserID";
 export default function Home() {
   const [savedReviews, setSavedReviews] = useState([]);
   const userID = useGetUserID();
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const fetchSavedReviews = async () => {
       try {
         const response = await axios.get(`http://localhost:3001/review/savedReviews/${userID}`);
-        console.log(response.data); // Check the response from the server
         setSavedReviews(response.data.savedReviews);
       } catch (err) {
         console.log(err);
@@ -21,11 +21,31 @@ export default function Home() {
     fetchSavedReviews();
   }, []);
 
-  console.log(savedReviews); // Check the value of savedReviews
+  const filteredReview = savedReviews.filter((r) =>
+    r.ShowName.toLowerCase().includes(search.toLowerCase())
+  );
 
   return (
-    <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", margin: "2rem" }}>
-      {savedReviews.map((review) => (
+    <div>
+      <div style={{marginRight:"2rem",marginTop:"1rem"}}>
+        <form className="form-inline d-flex justify-content-end">
+          <div className="input-group d-flex justify-content-end">
+            <input
+              className="form-control"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+              style={{ maxWidth: "250px",border:"1px solid black" }}
+              value={search || ""}
+              onChange={(e) => {
+                setSearch(e.target.value);
+              }}
+            />
+          </div>
+        </form>
+      </div>
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", margin: "2rem" }}>
+      {filteredReview.map((review) => (
         <div key={review._id} style={{ width: "20rem", margin: "1rem", padding: "1rem" }}>
             <div className="text-center card-box rounded-2 p-5 text-center shadow" style={{width:"20rem",height:"35rem"}}>
               <img
@@ -43,6 +63,7 @@ export default function Home() {
             </div>
           </div>
           ))}
+        </div>
         </div>
   );
 }

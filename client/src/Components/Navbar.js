@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useCookies } from "react-cookie";
 import "../styling/Navbar.css";
+
 export default function Navbar() {
   const [cookies, setCookies] = useCookies(["access_token"]);
 
@@ -9,14 +10,20 @@ export default function Navbar() {
     setCookies("access_token", "");
     window.localStorage.removeItem("userID");
   };
+
   return (
-    <nav
-      className="navbar navbar-expand-lg"
-      style={{ background: "black", height: "6rem" }}
-    >
+    <nav className="navbar navbar-expand-lg nav-height" style={{ background: "black"}}>
       <div className="container">
-        <Link className="navbar-brand" to="/" style={{ color: "white", fontSize: "2rem", marginLeft: "-6rem" }}>
-          <img src="../images/logoRH.jpg" style={{width:"11rem"}}/>
+        <Link
+          className="navbar-brand"
+          to="/"
+          style={{ color: "white", fontSize: "2rem", marginLeft: "-6rem" }}
+        >
+          <img
+            src="../images/logoRH.jpg"
+            style={{ width: "11rem" }}
+            alt="Logo"
+          />
         </Link>
         <button
           className="navbar-toggler"
@@ -35,7 +42,12 @@ export default function Navbar() {
               <Link
                 className="nav-link"
                 to="/all-reviews"
-                style={{ textDecoration: "bold", fontSize: "1.3rem", marginLeft: "3rem" }}
+                style={{
+                  textDecoration: "bold",
+                  fontSize: "1.3rem",
+                  marginLeft: "3rem",
+                  color: "white", // Set text color for the links on desktop
+                }}
               >
                 All Reviews
               </Link>
@@ -45,7 +57,12 @@ export default function Navbar() {
                 <Link
                   className="nav-link"
                   to="/auth"
-                  style={{ textDecoration: "bold", fontSize: "1.3rem", marginLeft: "1.5rem" }}
+                  style={{
+                    textDecoration: "bold",
+                    fontSize: "1.3rem",
+                    marginLeft: "1.5rem",
+                    color: "white", // Set text color for the links on desktop
+                  }}
                 >
                   Login/Sign Up
                 </Link>
@@ -56,7 +73,12 @@ export default function Navbar() {
                   <Link
                     className="nav-link"
                     to="/saved-reviews"
-                    style={{ textDecoration: "bold", fontSize: "1.3rem", marginLeft: "1.5rem" }}
+                    style={{
+                      textDecoration: "bold",
+                      fontSize: "1.3rem",
+                      marginLeft: "1.5rem",
+                      color: "white", // Set text color for the links on desktop
+                    }}
                   >
                     Saved Reviews
                   </Link>
@@ -65,7 +87,12 @@ export default function Navbar() {
                   <Link
                     className="nav-link"
                     to="/create-review"
-                    style={{ textDecoration: "bold", fontSize: "1.3rem", marginLeft: "1.5rem" }}
+                    style={{
+                      textDecoration: "bold",
+                      fontSize: "1.3rem",
+                      marginLeft: "1.5rem",
+                      color: "white", // Set text color for the links on desktop
+                    }}
                   >
                     Create Review
                   </Link>
@@ -74,7 +101,12 @@ export default function Navbar() {
                   <Link
                     className="nav-link"
                     to="/auth"
-                    style={{ textDecoration: "bold", fontSize: "1.3rem", marginLeft: "1.5rem" }}
+                    style={{
+                      textDecoration: "bold",
+                      fontSize: "1.3rem",
+                      marginLeft: "1.5rem",
+                      color: "white", // Set text color for the links on desktop
+                    }}
                     onClick={handleLogout}
                   >
                     Logout
@@ -82,22 +114,7 @@ export default function Navbar() {
                 </li>
               </>
             )}
-
           </ul>
-          <form
-            className="form-inline"
-            style={{ display: "flex", marginLeft: "auto" }}
-          >
-            <input
-              className="form-control mr-sm-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-light" type="submit" style={{marginLeft:"1rem"}}>
-              Search
-            </button>
-          </form>
         </div>
       </div>
     </nav>

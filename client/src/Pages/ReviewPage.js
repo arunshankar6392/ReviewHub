@@ -10,9 +10,7 @@ export default function ReviewPage() {
   useEffect(() => {
     const fetchReview = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:3001/review/${reviewID}`
-        );
+        const response = await axios.get(`http://localhost:3001/review/${reviewID}`);
         setReview(response.data);
       } catch (error) {
         console.log(error);
@@ -28,11 +26,16 @@ export default function ReviewPage() {
 
   return (
     <>
-      <div
-        className="text-center card-box rounded-2 p-5 text-center font-lb cardExpand"
-        style={{ margin: "5rem", display: "flex" , alignItems: "center" }}
-      >
-        <div>
+      <div className="container">
+        <div
+          className="text-center card-box rounded-2 p-5 text-center font-lb cardExpand"
+          style={{
+            margin: "5rem",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
           <img
             src={review.imageURL}
             alt={review.ShowName}
@@ -40,13 +43,18 @@ export default function ReviewPage() {
             height="auto"
             className="solution mb-4"
           />
-          <p className="fs-5">Rating : {review.rating} </p>
-        </div>
-        <div style={{marginLeft:"2rem"}}>
-          <h2 className="my-3 fw-normal">{review.ShowName}</h2>
-          <hr />
-          <p className="mb-5 fs-5 mt-5">{review.Review}</p>
-          
+          <div style={{ textAlign: "left" }}>
+            <h2 className="my-3 fw-normal" style={{ fontSize: "2rem", marginBottom: "1rem" }}>
+              {review.ShowName}
+            </h2>
+            <hr />
+            <p className="mb-5 fs-5 mt-5" style={{ fontSize: "1.5rem" }}>
+              {review.Review}
+            </p>
+            <p className="fs-5" style={{ fontSize: "1.3rem" }}>
+              Rating: {review.rating}
+            </p>
+          </div>
         </div>
       </div>
     </>
